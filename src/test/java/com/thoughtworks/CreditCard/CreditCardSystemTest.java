@@ -33,4 +33,18 @@ public class CreditCardSystemTest {
         assertEquals(1,points);
     }
 
+    @Test
+    public void should_return_1_point_when_consume_10_yuan_use_quickPay(){
+        CreditCardSystem cardSystem = new CreditCardSystem();
+        int points = cardSystem.consume(10,"quickPay");
+        assertEquals(1,points);
+    }
+
+    @Test
+    public void should_return_30_point_when_consume_208_yuan_use_weixin(){
+        CreditCardSystem cardSystem = new CreditCardSystem();
+        int points = cardSystem.consume(208,"quickPay");
+        assertEquals(30,points);
+    }
+
 }
