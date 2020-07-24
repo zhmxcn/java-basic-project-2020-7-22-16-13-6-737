@@ -14,6 +14,10 @@ public class CreditCardSystem {
             int exPoints = Math.min(money / 100 * 5, 100);
             return money/10+ exPoints;
         }
+        if (type.equals(("instalment"))){
+            int exPoint = money>5000?100:0;
+            return money/10+exPoint;
+        }
         return 0;
     }
 }
