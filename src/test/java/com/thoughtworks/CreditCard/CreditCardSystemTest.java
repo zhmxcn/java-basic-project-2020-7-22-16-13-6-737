@@ -29,7 +29,7 @@ public class CreditCardSystemTest {
     @Test
     public void should_return_1_point_when_consume_20_yuan_use_weixin(){
         CreditCardSystem cardSystem = new CreditCardSystem();
-        int points = cardSystem.consume(20,"weixin");
+        int points = cardSystem.consume(new WeixinPayment(20));
         assertEquals(1,points);
     }
 

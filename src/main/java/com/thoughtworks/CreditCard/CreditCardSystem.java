@@ -20,4 +20,8 @@ public class CreditCardSystem {
         }
         return 0;
     }
+
+    public int consume(Payment payment) {
+        return payment.getPoint();
+    }
 }
