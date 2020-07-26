@@ -1,15 +1,16 @@
 package com.thoughtworks.CreditCard;
 
 public abstract class Payment {
-    private int amount;
 
-    public Payment(int amount) {
-        this.amount = amount;
+    public String getName() {
+        return Name;
     }
 
-    abstract public int getPoint();
-
-    public int getAmount() {
-        return amount;
+    public void setName(String name) {
+        Name = name;
     }
+
+    public String Name;
+
+    abstract public int getPoint(int money);
 }

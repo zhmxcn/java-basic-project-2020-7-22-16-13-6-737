@@ -1,13 +1,12 @@
 package com.thoughtworks.CreditCard;
 
 public class WeixinPayment extends Payment{
-
-    public WeixinPayment(int amount) {
-        super(amount);
+    public WeixinPayment() {
+        this.setName("微信支付");
     }
 
     @Override
-    public int getPoint() {
-        return this.getAmount()/20;
+    public int getPoint(int money) {
+        return money/20;
     }
 }
