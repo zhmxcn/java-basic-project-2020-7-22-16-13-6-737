@@ -50,14 +50,14 @@ public class CreditCardSystemTest {
     @Test
     public void should_return_20_point_when_consume_208_yuan_use_instalment(){
         CreditCardSystem cardSystem = new CreditCardSystem();
-        int points = cardSystem.consume(200,"instalment");
+        int points = cardSystem.consume(new InstalmentPayment(208));
         assertEquals(20,points);
     }
 
     @Test
     public void should_return_740_point_when_consume_6400_yuan_use_instalment(){
         CreditCardSystem cardSystem = new CreditCardSystem();
-        int points = cardSystem.consume(6400,"instalment");
+        int points = cardSystem.consume(new InstalmentPayment(6400));
         assertEquals(740,points);
     }
 
